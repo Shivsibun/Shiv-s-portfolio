@@ -72,3 +72,22 @@ function textanimate(){
     })
 }
 document.addEventListener("DOMContentLoaded", textanimate);
+
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+  navbar.classList.toggle("show");
+});
+
+const header = document.getElementById("main-header");
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 50) {
+    header.classList.add("scrolled");
+    navbar.classList.add("blurred");
+  } else {
+    header.classList.remove("scrolled");
+    navbar.classList.remove("blurred");
+  }
+});
