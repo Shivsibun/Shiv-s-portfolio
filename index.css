@@ -149,13 +149,13 @@ nav a:hover{
     color: #111;
 }
 .hero img{
-    max-width: 40rem;
-    border-radius: 60px;
-    height: 20rem;
-    margin-top: -5rem;
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 0.8s ease 0.3s;
+    max-width: 100%;       
+  height: 30rem;           
+  border-radius: 20px;    
+  margin-top: 0;          
+  opacity: 0;
+  transform: translateX(50px);
+  transition: all 0.8s ease 0.3s;
    
 } 
 
@@ -663,7 +663,7 @@ footer{
     }
     .hero img{
         max-width: 40rem;
-        height: 40rem;
+        height: 20rem;
     }
     .contact-info,.contact-form{
         transform: none !important;
@@ -704,4 +704,16 @@ footer{
      .project-grid {
         grid-template-columns: 1fr;
     }
+}
+@media (min-width:1025px) {
+  .hero img {
+    max-width: 40rem;    
+  }
+}
+
+@media (max-width:768px) {
+  .hero img {
+    max-width: 80%;     
+    margin: 20px auto 0; 
+  }
 }
