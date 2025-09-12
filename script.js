@@ -1,6 +1,3 @@
-// script.js
-
-// 🔹 Header shrink effect on scroll
 window.addEventListener("scroll", () => {
   const header = document.getElementById("main-header");
   if (window.scrollY > 50) {
@@ -10,7 +7,6 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// 🔹 Animate elements when they enter viewport
 const observer = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -22,12 +18,10 @@ const observer = new IntersectionObserver(
   { threshold: 0.2 }
 );
 
-// Watch for animated sections
 document.querySelectorAll(
   ".hero-text, .hero img, .section-heading, .project-card, .about-image, .about-text, .contact-info, .contact-form, .footer-col"
 ).forEach((el) => observer.observe(el));
 
-// 🔹 Animate skill bars
 const skillObserver = new IntersectionObserver(
   (entries) => {
     entries.forEach((entry) => {
@@ -45,7 +39,6 @@ const skillObserver = new IntersectionObserver(
 
 document.querySelectorAll(".skill").forEach((el) => skillObserver.observe(el));
 
-// 🔹 Smooth scroll for nav links
 document.querySelectorAll("nav a[href^='#']").forEach((link) => {
   link.addEventListener("click", (e) => {
     e.preventDefault();
@@ -57,7 +50,6 @@ document.querySelectorAll("nav a[href^='#']").forEach((link) => {
   });
 });
 
-// 🔹 Contact form (demo only)
 const form = document.querySelector(".contact-form form");
 if (form) {
   form.addEventListener("submit", (e) => {
